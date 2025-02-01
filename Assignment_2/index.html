@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Purchase</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./Js/data.js"></script>
+  <script defer src="./Js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Concert Ticket Purchase</h1>
+  </header>
+
+  <main>
+    <!-- Part A -->
+    <section id="user-info">
+      <h2></h2>
+      <p></p>
+    </section>
+  
+    <!-- Part B and C in a Flex Container -->
+    <div id="details-container">
+      <section id="user-details">
+        <h3>User Data:</h3>
+        <ul></ul>
+      </section>
+  
+      <section id="concert-data">
+        <h3>Concert Data:</h3>
+        <ul></ul>
+      </section>
+    </div>
+  
+    <!-- Part D and E in another Flex Container -->
+    <div id="summary-container">
+      <section id="purchase-summary">
+        <h3>Processing Purchase:</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody id="summary-body">
+            <!-- Rows will be populated dynamically -->
+          </tbody>
+        </table>
+      </section>
+  
+      <section id="end-results">
+        <h3>Results:</h3>
+        <p id="result-message"></p>
+        <img id="success-image" src="./images/party.jpg" alt="Success" style="display: none;" />
+      </section>
+    </div>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Concert Ticket Purchase. All rights reserved by Anneysha.</p>
+  </footer>
+</body>
+</html>
