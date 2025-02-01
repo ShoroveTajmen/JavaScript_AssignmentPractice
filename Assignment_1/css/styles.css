@@ -1,0 +1,122 @@
+/* General styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+  transition: background-color 0.3s ease;
+}
+
+body:hover {
+  background-color: #f0f0f0; /* Subtle background hover effect */
+}
+
+/* Header styling */
+header {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient from peachy red to light orange */
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for header */
+  transition: background 0.3s ease;
+}
+
+header:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Invert gradient on hover */
+}
+
+/* Main content styling */
+main {
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around main content */
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 2.5rem;
+  background-color: #f4f4f4; /* Light background for sections */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for sections */
+}
+
+section h2 {
+  color: #ff7e5f; /* Highlighted section titles */
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+/* Image gallery styling */
+.image-gallery {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+.image-gallery img {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid #ff7e5f; /* Bold border for images */
+  border-radius: 10px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  border-color: #feb47b; /* Change border color on hover */
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient footer */
+  color: white;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-top: 5px solid #feb47b; /* Bold top border for footer */
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #feb47b; /* Hover effect for links in footer */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  body {
+      padding: 0.5rem;
+  }
+
+  header {
+      font-size: 1.6rem;
+  }
+
+  .image-gallery {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2, h3 {
+      font-size: 1.5rem; /* Larger font size for smaller screens */
+  }
+
+  p, li {
+      font-size: 1rem; /* Adjust text size for better readability */
+  }
+}
