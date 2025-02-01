@@ -1,0 +1,166 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: linear-gradient(90deg, #82143a, #a31674, #82143a); /* Maroon gradient effect */
+    background-color: #82143a; /* Maroon color */
+    color: white;
+    padding: 0.5rem 0; /* Reduced padding for smaller height */
+    text-align: center;
+    transition: background 0.3s ease; /* Smooth transition effect */
+    border-bottom: 3px solid #ffcc00; /* Yellow bottom border */
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Gray bottom shadow */
+  }
+  
+  header:hover {
+    background: linear-gradient(90deg, #82143a, #a31674, #82143a); /* Hover effect with different shades of maroon */
+  }
+  
+  
+  main {
+    padding: 1rem;
+  }
+
+h2 {
+   font-weight: 900;
+}
+
+/* Target name highlight */
+.found {
+    color: rgb(13, 13, 13);
+    font-weight: bold;
+    background-color: rgb(166, 221, 56);
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid darkgreen;
+}
+
+.not-found {
+    color: red;
+    font-weight: bold;
+}
+
+.target-item {
+    color: rgb(13, 13, 13);
+    font-weight: bold;
+    background-color: rgb(166, 221, 56);
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid darkgreen;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+/* Styling for Part B */
+section {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #0f0e0e; /* Border around each section */
+    border-radius: 15px;     /* Rounded corners for the border */
+    margin-bottom: 20px;     /* Space between sections */
+}
+
+
+.italic-text {
+    font-style: italic;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#productTable tbody tr:nth-child(odd) {
+    background-color: rgb(226, 235, 103);
+}
+
+
+
+
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #82143a;
+    color: white;
+    
+}
+
+td:nth-child(3), td:nth-child(4) {
+    text-align: right;
+}
+
+/* Styling for countdown results */
+#countdownResults {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 500px;
+    background-color: #f9f9f9;
+}
+
+#countdownResults p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Custom bold style for Number: X */
+.bold-number {
+    font-weight: 900;  /* Very bold text */
+    font-size: 20px;  /* Increase font size */
+    color: #333;  /* Optional: dark color for better visibility */
+}
+
+footer {
+    background: linear-gradient(90deg, #82143a, #a31674, #82143a); /* Maroon gradient effect */
+    background-color: #82143a; /* Maroon color */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 6px rgba(46, 62, 58, 0.3);
+    transition: background 0.3s ease; /* Smooth transition for hover */
+  }
+  footer:hover {
+    background: linear-gradient(90deg, #82143a, #a31674, #82143a); /* Hover effect with different shades of maroon */
+  }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 4px;
+    }
+}
