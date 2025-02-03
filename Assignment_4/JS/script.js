@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
         imgSrc = "images/moon.png";
     }
 
-    document.getElementById("greeting").innerHTML = `<p>${greetingText}</p><img src="${imgSrc}" alt="${greetingText}">`;
+
+    // will set a sun image
+    document.getElementById("greeting").innerHTML = `<img src="${imgSrc}" alt="${greetingText}">`;
 
     // Set up the date picker
     document.getElementById("datePicker").value = "2024-11-18";
@@ -34,3 +36,13 @@ function setTodayDate() {
     const today = new Date().toISOString().split('T')[0];
     document.getElementById("datePicker").value = today;
 }
+
+
+// Display hyperlinks list
+document.getElementById("links-list").innerHTML = listLinks([
+    "https://example.com",
+    "https://google.com",
+    123,  // Invalid item for testing error handling
+    "https://github.com"
+]);
+
