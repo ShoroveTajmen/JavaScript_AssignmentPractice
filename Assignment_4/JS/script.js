@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Display images list
     document.getElementById("images-list").innerHTML = listImages(arrayOfImages);
-    document.getElementById("images-list").innerHTML += listImages(arrayOfSomeImages);
+    document.getElementById("some-images-list").innerHTML = listImages(arrayOfSomeImages);
 
     // Display names list
     document.getElementById("names-list").innerHTML = listNames(arrayOfNames, "ul");
@@ -39,10 +39,6 @@ function setTodayDate() {
 
 
 // Display hyperlinks list
-document.getElementById("links-list").innerHTML = listLinks([
-    "https://example.com",
-    "https://google.com",
-    123,  // Invalid item for testing error handling
-    "https://github.com"
-]);
+document.getElementById("links-list").innerHTML = listLinks(arrayOfLinks);
+document.getElementById("moreLink-list").innerHTML = listLinks(anotherArrayOfLinks);
 

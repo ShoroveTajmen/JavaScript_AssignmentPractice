@@ -4,7 +4,7 @@ function listImages(imageArray) {
         return "Error: Expected an array.";
     }
 
-    let listHtml = "<ul>";
+    let listHtml = "";
     for (let item of imageArray) {
         if (typeof item === "string") {
             listHtml += `<li><img src="images/${item}" alt="${item}"></li>`;
@@ -12,7 +12,6 @@ function listImages(imageArray) {
             console.error(`Invalid item in array: ${item}`);
         }
     }
-    listHtml += "</ul>";
     return listHtml;
 }
 

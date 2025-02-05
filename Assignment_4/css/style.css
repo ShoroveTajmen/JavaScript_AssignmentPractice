@@ -21,9 +21,10 @@ h1, h2 {
 .box {
     background: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 7px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     width: 40%;
+    border: 3px solid gray; /* Added gray border */
 }
 
 input[type="date"] {
@@ -54,14 +55,24 @@ ul, ol {
     padding: 0;
 }
 
-li {
+/* li {
     background: #fff;
     margin: 10px auto;
     padding: 10px;
     width: 50%;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+} */
+
+ul {
+    list-style-type: disc; /* Ensures bullet points appear */
+    padding-left: 20px; /* Adjusts spacing */
 }
+
+li {
+    margin: 5px 0;
+}
+
 
 a {
     text-decoration: none;
