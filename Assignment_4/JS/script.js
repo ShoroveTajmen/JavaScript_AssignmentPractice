@@ -12,12 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
         imgSrc = "images/sun-afternoon.png";
     } else {
         greetingText = "Good evening, the moon is up";
-        imgSrc = "images/moon.png";
+        imgSrc = "images/moon-evening.png";
     }
 
 
-    // will set a sun image
-    document.getElementById("greeting").innerHTML = `<img src="${imgSrc}" alt="${greetingText}">`;
+// Set greeting text first, then image
+const greetingElement = document.getElementById("greeting");
+greetingElement.innerHTML = `<p>${greetingText}</p>`;  // Add greeting text first
+greetingElement.innerHTML += `<img src="${imgSrc}" alt="${greetingText}" style="max-width: 100px; height: auto;">`; // Add image after text
+  
 
     // Set up the date picker
     document.getElementById("datePicker").value = "2024-11-18";
