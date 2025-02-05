@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Display names list
     document.getElementById("names-list").innerHTML = listNames(arrayOfNames, "ul");
-    document.getElementById("names-list").innerHTML += listNames(arrayOfNames, "ol");
+    document.getElementById("moreNames-list").innerHTML += listNames(arrayOfNames, "ol");
 });
 
 // Function to set the date picker to today's date
@@ -42,3 +42,17 @@ function setTodayDate() {
 document.getElementById("links-list").innerHTML = listLinks(arrayOfLinks);
 document.getElementById("moreLink-list").innerHTML = listLinks(anotherArrayOfLinks);
 
+
+    // Invalid examples for testing purposes:
+    document.getElementById("images-list").innerHTML = listImages(notAnArrayOfImages);  // Invalid, not an array
+    document.getElementById("images-list").innerHTML = listImages(alsoNotAnArrayOfImages);  // Invalid, not an array
+    document.getElementById("images-list").innerHTML = listImages(anArrayOfNumbers);  // Invalid, not an array
+    document.getElementById("images-list").innerHTML = listImages(anArrayOfBooleans);  // Invalid, not an array
+
+
+    document.getElementById("links-list").innerHTML = listLinks(notAnArrayOfLinks);  // Invalid, not an array
+    document.getElementById("links-list").innerHTML = listLinks(alsoNotAnArrayOfLinks);  // Invalid, not an array
+
+    document.getElementById("names-list").innerHTML = listNames(notAnArrayOfNames);  // Invalid, not an array
+    document.getElementById("names-list").innerHTML = listNames(arrayOfNamesTooSmall);  // Invalid, not an array
+    document.getElementById("names-list").innerHTML = listNames(arrayOfNames );  // Invalid, not an array

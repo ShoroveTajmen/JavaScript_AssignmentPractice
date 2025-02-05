@@ -7,7 +7,7 @@ function listImages(imageArray) {
     let listHtml = "";
     for (let item of imageArray) {
         if (typeof item === "string") {
-            listHtml += `<li><img src="images/${item}" alt="${item}"></li>`;
+            listHtml += `<li><img class="listImage" src="images/${item}" alt="${item}"></li>`;
         } else {
             console.error(`Invalid item in array: ${item}`);
         }
@@ -22,15 +22,14 @@ function listLinks(urlArray) {
         return "Error: Expected an array.";
     }
 
-    let listHtml = "<ul>";
+    let listHtml = "";
     for (let url of urlArray) {
         if (typeof url === "string") {
-            listHtml += `<li><a href="${url}" target="_blank">${url}</a></li>`;
+            listHtml += `<li class="linkColor"><a href="${url}" target="_blank">${url}</a></li>`;
         } else {
             console.error(`Invalid item in array: ${url}`);
         }
     }
-    listHtml += "</ul>";
     return listHtml;
 }
 

@@ -10,75 +10,89 @@
     <script src="./JS/script.js" defer></script>
 </head>
 <body>
-    <h1>Assignment04 Sample</h1>
+        <!-- Header -->
+        <header>
+            <h1>Assignment04 Sample</h1>
+        </header>
     
 
-    <!-- Part 1 -->
-    <section>
-        <h2>Part 1: Using Date</h2>
-        <div class="container">
-            <div class="box">
-                <h3>Time of day...</h3>
-                <div id="greeting"></div>
-            </div>
-            <div class="box">
-                <h3>Pre-set HTML form <em>type='date'</em></h3>
-                <input type="date" id="datePicker">
-                <button onclick="setTodayDate()">Today's Date</button>
-            </div>
-        </div>
-    </section>
-    
-
-    <!-- part 2 -->
-     <section>
-        <h2>Part 2: Listing Items</h2>
-        
-        <div class="container">
-            <div class="box">
-                <h3>A: Listing images...</h3>
-                <p>Invoke Using Invalid Arguments Types...<br>(See Console for function error message)</p>
-                <p>Invoke with expected Array arguments, but they contain invalid data</p>
-                <p>Invoking with an array of numbers, not string image names <br> (See Console for function error message).</p>
-                <p>Invoking with an array of booleans, not string image names <br> (See Console for function error message).</p>
-                <p>Invoking with a valid array of image names</p>
-                <ul id="images-list"></ul>
-
-                <p>Invoking with an array of some image names and some junk <br></p>
-                <p>(See Console for function error messages). <br></p>
-                <ul id="some-images-list"></ul>
-
-            </div>
-    
-            <div class="box">
-                <h3>B: Listing hyperlinks...</h3>
-                <p>Trying with an array that contains booleans, and not string urls... <br></p>
-                <p>Trying with a number, not an array... <br></p>
-                <p>👎Error: you must provide an array <br></p>
-                <p>Trying with a valid array of link URLS... <br></p>
-                <ul id="links-list"></ul>
-                <p>Trying with a array of link URLS and also junk... <br></p>
-                <ul id="moreLink-list"></ul>
-               
-            </div>
-        </div>
-     </section>
-
-
-    <!-- PART 3 -->
-    <section>
-            <h2>Part 3: Listing Items</h2>
+<main>
+        <!-- Part 1 -->
+        <section>
+            <h2>Part 1: Using Date</h2>
             <div class="container">
-                <div class="box"><h3>C: Listing names...</h3>
-                    <p>Providing invalid parameter(not an array)<br></p>
-                    <p>👎Error: This function requires an array<br></p>
-                    <p>Providing invalid parameter(array is too small)<br></p>
-                    <p>👎Error: Array must contain at least two items or more<br></p>
-                    <p>Providing invalid second parameter(can only make 'ul' or 'ol' lists)<br></p>
-                    <p>👎Error: In HTML only UL or OL lists can be made. There is no 'cheeseburger' list element<br></p>
-                    <p>Providing valid parameter array, using default second parameter for list type 'ul'<br></p>
-                <div id="names-list"></div></div>
+                <div class="box">
+                    <h3>Time of day...</h3>
+                    <div id="greeting"></div>
+                </div>
+                <div class="box">
+                    <h3>Pre-set HTML form <em>type='date'</em></h3>
+                    <input type="date" id="datePicker">
+                    <button onclick="setTodayDate()">Today's Date</button>
+                </div>
             </div>
-    </section>
+        </section>
+        
+    
+        <!-- part 2 -->
+         <section>
+            <h2>Part 2: Listing Items</h2>
+            
+            <div class="container">
+                <div class="box">
+                    <h3>A: Listing images...</h3>
+                    <p>Invoke Using Invalid Arguments Types...<br>(See Console for function error message)</p>
+                    <p>Invoke with expected Array arguments, but they contain invalid data</p>
+                    <p>Invoking with an array of numbers, not string image names <br> (See Console for function error message).</p>
+                    <p>Invoking with an array of booleans, not string image names <br> (See Console for function error message).</p>
+                    <p>Invoking with a valid array of image names</p>
+                    <ul id="images-list"></ul>
+    
+                    <p>Invoking with an array of some image names and some junk <br></p>
+                    <p>(See Console for function error messages). <br></p>
+                    <ul id="some-images-list"></ul>
+    
+                </div>
+        
+                <div class="box">
+                    <h3>B: Listing hyperlinks...</h3>
+                    <p>Trying with an array that contains booleans, and not string urls... <br></p>
+                    <p>Trying with a number, not an array... <br></p>
+                    <p>👎Error: you must provide an array <br></p>
+                    <p>Trying with a valid array of link URLS... <br></p>
+                    <ul id="links-list"></ul>
+                    <p>Trying with a array of link URLS and also junk... <br></p>
+                    <ul id="moreLink-list"></ul>
+                   
+                </div>
+            </div>
+         </section>
+    
+    
+        <!-- PART 3 -->
+        <section>
+                <h2>Part 3: Listing Items</h2>
+                <div class="container">
+                    <div class="box"><h3>C: Listing names...</h3>
+                        <p>Providing invalid parameter(not an array)<br></p>
+                        <p>👎Error: This function requires an array<br></p>
+                        <p>Providing invalid parameter(array is too small)<br></p>
+                        <p>👎Error: Array must contain at least two items or more<br></p>
+                        <p>Providing invalid second parameter(can only make 'ul' or 'ol' lists)<br></p>
+                        <p>👎Error: In HTML only UL or OL lists can be made. There is no 'cheeseburger' list element<br></p>
+                        <p>Providing valid parameter array, using default second parameter for list type 'ul'<br></p>
+                        <ul id="names-list"></ul>
+                        <p>Providing valid parameter array, using default second parameter for list type 'ul'<br></p>
+                        <ul id="moreNames-list"></ul>
+                
+                </div>
+                </div>
+        </section>
+</main>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Your Company. All Rights Reserved.</p>
+        </footer>
 </body>
 </html>

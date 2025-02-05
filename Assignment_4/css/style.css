@@ -1,12 +1,54 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    line-height: 1.6;
     margin: 0;
-    padding: 20px;
-    text-align: left;
+    padding: 0;
+  }
+  
+  header {
+    background: linear-gradient(90deg, #82143a, #a31674, #82143a); /* Maroon gradient effect */
+    background-color: #82143a; /* Maroon color */
+    color: white;
+    padding: 0.5rem 0; /* Reduced padding for smaller height */
+    text-align: center;
+    transition: background 0.3s ease; /* Smooth transition effect */
+    border-bottom: 3px solid #ffcc00; /* Yellow bottom border */
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Gray bottom shadow */
+  }
+  
+  header:hover {
+    background: linear-gradient(90deg, #82143a, #a31674, #82143a); /* Hover effect with different shades of maroon */
+  }
+
+    
+  main {
+    padding: 1rem;
+  }
+
+
+h1 {
+    margin: 0;
 }
 
-h1, h2 {
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #82143a, #a31674, #82143a); /* Maroon gradient effect */
+    background-color: #82143a; /* Maroon color */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 6px rgba(46, 62, 58, 0.3);
+    transition: background 0.3s ease; /* Smooth transition for hover */
+  }
+  footer:hover {
+    background: linear-gradient(90deg, #82143a, #a31674, #82143a); /* Hover effect with different shades of maroon */
+  }
+
+
+h2 {
     color: #333;
     margin-left: 140px; /* Adjust as needed */
 }
@@ -48,8 +90,21 @@ img {
     max-width: 100px;
     height: auto;
     margin: 10px 0;
+    /* border: 3px solid gray; Added gray border */
+}
+.listImage{
+      border: 3px solid gray; 
 }
 
+.container a {
+    color: #808080;
+    font-weight: bold;
+}
+
+
+.linkColor{
+    border-bottom: 2px solid rgb(247, 238, 64);
+}
 ul, ol {
     list-style: none;
     padding: 0;
@@ -73,6 +128,17 @@ li {
     margin: 5px 0;
 }
 
+#moreNames-list ol {
+    list-style-type: decimal; /* This ensures numbers are used */
+    margin-left: 20px; /* Adds space to the left of the list */
+}
+
+#moreNames-list ol li {
+    font-size: 16px; /* Adjust the font size */
+    color: #333; /* Set the text color */
+    padding: 5px 0; /* Add some padding for better readability */
+}
+
 
 a {
     text-decoration: none;
@@ -94,11 +160,18 @@ a:hover {
     /* .container {
         flex-direction: column;
         align-items: center;
-    } */
+    } 
 
-    /* .box {
+     .box {
         width: 80%;
     } */
+
+    ul#links-list, ul#moreLink-list {
+        padding-left: 15px;
+        width: 100%;
+    }
+
+
 }
 
 /* Responsive design for mobile devices (480px) */
@@ -111,14 +184,21 @@ a:hover {
     /* .container {
         flex-direction: column;
         align-items: center;
-    } */
+    } */ 
 
-    /* .box {
+     /* .box {
         width: 100%;
         padding: 15px;
     } */
 
-    li {
-        width: 90%;
+    ul#links-list, ul#moreLink-list {
+        padding-left: 10px;
+        width: 100%;
     }
+
+    /* li {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    } */
 }
