@@ -29,41 +29,50 @@
         </div>
     </section>
     
-    <section>
+
+    <!-- part 2 -->
+     <section>
         <h2>Part 2: Listing Items</h2>
         
-        <div>
-            <h3>A: Listing images...</h3>
-            <p>Invoke Using Invalid Arguments Types...<br>(See Console for function error message)</p>
-            <p>Invoke with expected Array arguments, but they contain invalid data</p>
-            <p>Invoking with an array of numbers, not string image names <br> (See Console for function error message).</p>
-            <p>Invoking with an array of booleans, not string image names <br> (See Console for function error message).</p>
-            <p>Invoking with a valid array of image names</p>
-            <div id="images-list"></div>
+        <div class="container">
+            <div class="box">
+                <h3>A: Listing images...</h3>
+                <p>Invoke Using Invalid Arguments Types...<br>(See Console for function error message)</p>
+                <p>Invoke with expected Array arguments, but they contain invalid data</p>
+                <p>Invoking with an array of numbers, not string image names <br> (See Console for function error message).</p>
+                <p>Invoking with an array of booleans, not string image names <br> (See Console for function error message).</p>
+                <p>Invoking with a valid array of image names</p>
+                <div id="images-list"></div>
+            </div>
+    
+            <div class="box">
+                <h3>B: Listing hyperlinks...</h3>
+                <p>Trying with an array that contains booleans, and not string urls... <br></p>
+                <p>Trying with a number, not an array... <br></p>
+                <p>👎Error: you must provide an array <br></p>
+                <p>Trying with a valid array of link URLS... <br></p>
+                <div id="links-list"></div>
+                <p>Trying with a array of link URLS and also junk... <br></p>
+               
+            </div>
         </div>
+     </section>
 
-        <div>
-            <h3>B: Listing hyperlinks...</h3>
-            <p>Trying with an array that contains booleans, and not string urls... <br></p>
-            <p>Trying with a number, not an array... <br></p>
-            <p>👎Error: you must provide an array <br></p>
-            <p>Trying with a valid array of link URLS... <br></p>
-            <div id="links-list"></div>
-            <p>Trying with a array of link URLS and also junk... <br></p>
-           
-        </div>
-        
-        <div>
-            <h3>C: Listing names...</h3>
-            <p>Providing invalid parameter(not an array)<br></p>
-            <p>👎Error: This function requires an array<br></p>
-            <p>Providing invalid parameter(array is too small)<br></p>
-            <p>👎Error: Array must contain at least two items or more<br></p>
-            <p>Providing invalid second parameter(can only make 'ul' or 'ol' lists)<br></p>
-            <p>👎Error: In HTML only UL or OL lists can be made. There is no 'cheeseburger' list element<br></p>
-            <p>Providing valid parameter array, using default second parameter for list type 'ul'<br></p>
-            <div id="names-list"></div>
-        </div>
+
+    <!-- PART 3 -->
+    <section>
+            <h2>Part 3: Listing Items</h2>
+            <div class="container">
+                <div class="box"><h3>C: Listing names...</h3>
+                    <p>Providing invalid parameter(not an array)<br></p>
+                    <p>👎Error: This function requires an array<br></p>
+                    <p>Providing invalid parameter(array is too small)<br></p>
+                    <p>👎Error: Array must contain at least two items or more<br></p>
+                    <p>Providing invalid second parameter(can only make 'ul' or 'ol' lists)<br></p>
+                    <p>👎Error: In HTML only UL or OL lists can be made. There is no 'cheeseburger' list element<br></p>
+                    <p>Providing valid parameter array, using default second parameter for list type 'ul'<br></p>
+                <div id="names-list"></div></div>
+            </div>
     </section>
 </body>
 </html>

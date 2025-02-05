@@ -3,11 +3,12 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 h1, h2 {
     color: #333;
+    margin-left: 140px; /* Adjust as needed */
 }
 
 .container {
@@ -69,4 +70,44 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+
+
+/* Responsive design for tablets (768px) */
+@media screen and (max-width: 768px) {
+    h1, h2 {
+        margin-left: 20px; /* Reduced margin for smaller screens */
+    }
+
+    /* .container {
+        flex-direction: column;
+        align-items: center;
+    } */
+
+    /* .box {
+        width: 80%;
+    } */
+}
+
+/* Responsive design for mobile devices (480px) */
+@media screen and (max-width: 480px) {
+    h1, h2 {
+        margin-left: 5px; /* Further reduced margin */
+        /* text-align: center; Center alignment for mobile */
+    }
+
+    /* .container {
+        flex-direction: column;
+        align-items: center;
+    } */
+
+    /* .box {
+        width: 100%;
+        padding: 15px;
+    } */
+
+    li {
+        width: 90%;
+    }
 }
