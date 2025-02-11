@@ -121,7 +121,7 @@ document.getElementById('deck-object').innerHTML += `<p>${deck.describeSelf()}</
 
 // Shuffle the deck
 deck.shuffle();
-document.getElementById('deck-object').innerHTML += `<p>Deck shuffled!</p>`;
+// document.getElementById('deck-object').innerHTML += `<p>Deck shuffled!</p>`;
 
 // Deal a card and display it
 let dealtCard = deck.dealCard();
@@ -152,13 +152,23 @@ class Player {
     }
 
     describeSelf() {
-        let description = `<div class="player-profile"><img src="avatars/${this.name.toLowerCase()}.jpg" alt="${this.name} avatar"><span>${this.name}'s hand:</span></div><div class="player-hand">`;
-        this.hand.forEach(card => {
-            description += card.describeSelf();
+        let description = `<div class="player-profile">
+            <img src="avatars/${this.name.toLowerCase()}.jpg" alt="${this.name} avatar">
+            <span>${this.name}'s hand:</span>
+        </div>
+        <div class="player-hand">`;
+    
+        this.hand.forEach((card, index) => {
+            description += `<img src="card-images/${card.face}_of_${card.suit.toLowerCase()}s.svg" 
+                onerror="this.src='card-images/${card.value}_of_${card.suit.toLowerCase()}s.svg'"
+                alt="${card.face} of ${card.suit}s. Value: ${card.value}" 
+                style="left: ${index * 60}px;">`; // Adjust overlap here
         });
+    
         description += '</div>';
         return description;
     }
+    
 }
 
 /*
