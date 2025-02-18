@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #800000;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Container */
+.form-container {
+  background: white;
+  padding: 20px;
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Label Alignment */
+label {
+  flex: 1;
+  font-weight: bold;
+  text-align: left;
+  min-width: 120px; /* Ensures all labels align */
+}
+
+/* Input Alignment */
+input, select {
+  flex: 2;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Ensure input fields align properly */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 2;
+  width: 10%;
+}
+
+/* Fix alignment for Student ID & Password */
+.input-wrapper input {
+  flex: 1;
+  padding-right: 50px; /* Space for button/icon */
+  width: 100%;
+}
+
+/* Tooltip Icon Position */
+.tooltip-icon {
+  position: absolute;
+  right: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(252, 255, 249);
+  background-color: rgb(205, 180, 179);
+  border: 1px solid #731c1c;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+}
+
+.tooltip-icon[data-tooltip]:after {
+  content: attr(data-tooltip);
+  font-weight: normal;
+  font-size: 13px;
+  position: absolute;
+  text-align: left;
+  top: -100px; /* Move above the icon */
+  left: -1px; /* Move left of the icon */
+  transform: translateX(-100%); /* Adjust horizontal alignment */
+  background-color: #731c1c;
+  border: 3px solid rgb(180, 116, 15);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 7px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s, background-color 0.3s;
+  z-index: 1000;
+  width: 120px;
+  white-space: normal;
+}
+
+.tooltip-icon[data-tooltip]:hover {
+  background-color: #731c1c;
+}
+
+.tooltip-icon[data-tooltip]:hover:after {
+  opacity: 1;
+}
+
+
+#showHideBtn{
+  border: 1px solid #731c1c;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#courses{
+  color: #731c1c;
+  font-weight: bold;
+}
+/* Password Show/Hide Button */
+.input-wrapper button {
+  position: absolute;
+  right: 5px;
+  padding: 5px 10px;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.submit-group {
+  justify-content: left;
+}
+
+.submit-btn {
+  width: 20%; /* Reduced width */
+  color: #731c1c;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+  background-color: rgb(205, 180, 179);
+  border: 1px solid #761d1d;
+}
+
+.submit-btn:hover {
+  background-color: #a00000;
+  color: white;
+}
+
+
+/* Error Styles */
+.error {
+  border: 2px solid red !important;
+  background-color: #fdd !important;
+}
+
+/* Error Message Container */
+#errorContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.error-message-container {
+  background-color: #ffe6e6;
+  border: 1px solid red;
+  color: red;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-message-container ul {
+  padding-left: 20px;
+}
+
