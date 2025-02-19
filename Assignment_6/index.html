@@ -5,28 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assignment06 Sample</title>
   <link rel="stylesheet" href="./css/style.css">
+  <!-- Include Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<!-- Include Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
-  <h1>Assignment06 Sample</h1>
+      <!-- Header -->
+    <header>
+        <h1>Assignment06 Sample</h1>
+    </header>
+
+<main>
+<div id="instruction-text">
   <p>Feel free to schedule an appointment to meet in person with one of our course advisors. Learn more about some of the great BCIT PTS courses we offer!</p>
-  <p>You can hover over the ? in the form below to activate a tooltip, and use the Show/Hide button to toggle between showing or not showing the characters in the password field.</p>
+  <p>You can hover over the ❔ in the form below to activate a tooltip, and use the <strong>Show/Hide</strong> button to toggle between showing or not showing the characters in the password field.</p>
+</div>
 
   <div class="form-container">
     <form id="registrationForm" action="thank-you.html" method="GET">
       <div class="form-group">
         <label for="firstname"><strong>Firstname:</strong></label>
-        <input type="text" id="firstname" name="firstname" required>
+        <input type="text" id="firstname" name="firstname">
       </div>
 
       <div class="form-group">
         <label for="lastname"><strong>Lastname:</strong></label>
-        <input type="text" id="lastname" name="lastname" required>
+        <input type="text" id="lastname" name="lastname">
       </div>
 
       <div class="form-group">
         <label for="studentId"><strong>Student ID:</strong></label>
         <div class="input-wrapper align-fix">
-          <input type="text" id="studentId" name="studentId" required>
+          <input type="text" id="studentId" name="studentId">
           <span class="tooltip-icon" data-tooltip="? BCIT student IDs must match the pattern:A0nnnnnnn where 'n' is any number.">&quest;</span>
         </div>
       </div>
@@ -34,20 +46,23 @@
       <div class="form-group">
         <label for="password"><strong>Password:</strong></label>
         <div class="input-wrapper align-fix">
-          <input type="password" id="password" name="password" required>
+          <input type="password" id="password" name="password">
           <button type="button" id="showHideBtn">Show</button>
         </div>
       </div>
 
       <div class="form-group">
         <label for="date"><strong>Date:</strong></label>
-        <input type="date" id="date" name="date" value="2022-06-28" required>
+        <div class="input-wrapper align-fix">
+          <input id="date" name="date" type="text" placeholder="Select Date">
+          <button id="clearDate">X</button>
+        </div>
       </div>
 
       <div class="form-group">
         <label for="courses"><strong>Course:</strong></label>
         <select id="courses" name="courses">
-          <option value="" selected disabled>Choose your course</option>
+          <option value="" selected disabled>Choose your course:</option>
           <option value="COMP1850">COMP1850</option>
           <option value="COMP2132">COMP2132</option>
           <option value="COMP2913">COMP2913</option>
@@ -64,7 +79,14 @@
 
   <!-- Error Messages Will Appear Here -->
   <div id="errorContainer"></div>
+</main>
+
+    <!-- Footer -->
+      <footer>
+        <p id="footer-text">© 2025 Your Company. All Rights Reserved by Annayesha.</p>
+      </footer>
 
   <script src="./JS/script.js"></script>
+  
 </body>
 </html>

@@ -1,12 +1,30 @@
-// Set default and minimum date for the date input
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize flatpickr on the date input
+  flatpickr("#date", {
+    dateFormat: "Y-m-d",
+    onChange: function(selectedDates, dateStr, instance) {
+      // Update the value of the input when a date is selected
+      document.getElementById("date").value = dateStr;
+    }
+  });
+
+  // Set the default date to today's date
   const today = new Date();
   const formattedDate = today.toISOString().split("T")[0];
-  const dateInput = document.getElementById("date");
-  dateInput.setAttribute("type", "date");
-  dateInput.setAttribute("value", formattedDate);
-  dateInput.setAttribute("min", formattedDate);
+  document.getElementById("date").value = formattedDate;
+
+  // Add event listener for the clear button
+  document.getElementById("clearDate").addEventListener("click", () => {
+    // When the clear button is clicked, set the date to today's date
+    document.getElementById("date").value = formattedDate;
+    // Trigger the change event to update the flatpickr instance
+    const fp = flatpickr.getInstance(document.getElementById("date"));
+    if (fp) {
+      fp.setDate(formattedDate);
+    }
+  });
 });
+
 
 // Show/Hide Password
 const passwordInput = document.getElementById("password");
@@ -39,7 +57,7 @@ form.addEventListener("submit", (event) => {
   const firstname = document.getElementById("firstname");
   if (!firstname.value.trim()) {
       highlightError(firstname);
-      errorMessages.push("❌ Firstname is required.");
+      errorMessages.push(" Firstname is required.");
       isValid = false;
   }
 
@@ -47,7 +65,7 @@ form.addEventListener("submit", (event) => {
   const lastname = document.getElementById("lastname");
   if (!lastname.value.trim()) {
       highlightError(lastname);
-      errorMessages.push("❌ Lastname is required.");
+      errorMessages.push(" Lastname is required.");
       isValid = false;
   }
 
@@ -55,19 +73,19 @@ form.addEventListener("submit", (event) => {
   const studentId = document.getElementById("studentId");
   if (!studentId.value.trim()) {
       highlightError(studentId);
-      errorMessages.push("❌ Student ID is required.");
+      errorMessages.push("Seriously? You should know you need to provide a student number.");
       isValid = false;
   } else if (!studentNumberRegEx.test(studentId.value)) {
       highlightError(studentId);
-      errorMessages.push("❌ Invalid Student ID. Format: A0nnnnnnn.");
+      errorMessages.push(" Invalid Student ID. Format: A0nnnnnnn.");
       isValid = false;
   }
 
   // Validate Password
   const password = document.getElementById("password");
-  if (!password.value.trim()) {
+  if (!password.value.trim() || password.value === "") {
       highlightError(password);
-      errorMessages.push("❌ Password cannot be empty.");
+      errorMessages.push(" Password cannot be empty.");
       isValid = false;
   }
 
@@ -75,7 +93,7 @@ form.addEventListener("submit", (event) => {
   const courses = document.getElementById("courses");
   if (courses.value === "") {
       highlightError(courses);
-      errorMessages.push("❌ Please select a course.");
+      errorMessages.push(" Please choose a course from the drop down list.");
       isValid = false;
   }
 
@@ -97,9 +115,10 @@ function displayErrorMessages(messages) {
   errorBox.classList.add("error-message-container");
 
   let errorTitle = document.createElement("p");
-  errorTitle.textContent = "⚠️ Please fix the following errors before submitting:";
+  errorTitle.innerHTML = '<span class="warning-text">❕Warning</span> Form Submission Failed!';
   errorTitle.style.fontWeight = "bold";
   errorBox.appendChild(errorTitle);
+  
 
   let errorList = document.createElement("ul");
   messages.forEach(msg => {

@@ -1,19 +1,46 @@
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  text-align: center;
+  line-height: 1.6;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
-h1 {
-  color: #800000;
-}
-
-p {
+/* HEADER STYLES */
+header {
+  background: linear-gradient(90deg, rgb(108, 43, 43), #c74da6, rgb(108, 43, 43));
+  color: white;
+  padding: 0.5rem 0;
   text-align: center;
+  transition: background 0.3s ease;
+  border-bottom: 3px solid #e0a00a;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+  font-size: 25px;
+}
+#thank-para{
+  padding-left: 20px;
+}
+.warning-text {
+  background-color: white;
+  border: 2px solid  rgb(108, 43, 43);
+  padding: 2px 5px;
+  border-radius: 8px;
+  color:  rgb(108, 43, 43);
+}
+
+
+#instruction-text{
+  text-align: left;
   margin-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 30px;
+}
+
+#footer-text{
+  text-align: center;
 }
 
 /* Form Container */
@@ -21,15 +48,15 @@ p {
   background: white;
   padding: 20px;
   max-width: 450px;
-  margin: 0 auto;
+  margin: 30px;
   border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2), 6px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Form Groups */
 .form-group {
   display: flex;
-  align-items: center;
+  align-items:center;
   justify-content: space-between;
   margin-bottom: 10px;
 }
@@ -45,9 +72,12 @@ label {
 /* Input Alignment */
 input, select {
   flex: 2;
-  padding: 8px;
+  padding: 7px;
   box-sizing: border-box;
   width: 100%;
+  color: #731c1c;
+  font-weight: bold;
+  border-radius: 7px;
 }
 
 /* Ensure input fields align properly */
@@ -65,11 +95,25 @@ input, select {
   padding-right: 50px; /* Space for button/icon */
   width: 100%;
 }
+#clearDate {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(205, 180, 179);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 1px 4px;
+  border: 1px solid #731c1c;
+  border-radius: 50%;
+  color: white;
+}
 
 /* Tooltip Icon Position */
 .tooltip-icon {
   position: absolute;
-  right: 10px;
+  right: 4px;
   font-size: 17px;
   font-weight: bold;
   cursor: pointer;
@@ -78,6 +122,7 @@ input, select {
   border: 1px solid #731c1c;
   height: 20px;
   width: 20px;
+  padding-left: 5px;
   border-radius: 4px;
 }
 
@@ -165,22 +210,84 @@ input, select {
 /* Error Message Container */
 #errorContainer {
   margin-top: 20px;
-  text-align: center;
+  text-align: left;
+  margin-left: 30px; /* Align to the left */
 }
 
 .error-message-container {
   background-color: #ffe6e6;
-  border: 1px solid red;
-  color: red;
+  border: 5px solid rgb(108, 43, 43);
+  color: rgb(9, 8, 8);
   padding: 10px;
-  border-radius: 5px;
   text-align: left;
-  max-width: 450px;
-  margin-left: auto;
+  max-width: 500px;
+  margin-left: 0;
   margin-right: auto;
+  border-radius: 15px;
 }
 
 .error-message-container ul {
   padding-left: 20px;
 }
+
+/* FOOTER STYLES */
+footer {
+  background: linear-gradient(90deg, #a99056, #e0a00a, #a99056);
+  color: rgb(108, 43, 43);
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 6px rgba(46, 62, 58, 0.3);
+  transition: background 0.3s ease;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* 📌 RESPONSIVE DESIGN FOR TABLETS (768px) */
+@media (max-width: 768px) {
+  #errorContainer {
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 150px;
+    margin-left: 0;
+  }
+    /* Form Container */
+    .form-container {
+      margin-left: 13px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2), 6px 6px 15px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* 📌 RESPONSIVE DESIGN FOR MOBILE DEVICES (480px) */
+@media (max-width: 480px) {
+  #errorContainer {
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 150px;
+    margin-left: 0;
+  }
+  .error-message-container {
+    margin-left: 13px;
+    margin-right: 15px;
+  }
+  /* Form Container */
+  .form-container {
+    background: white;
+    padding: 20px;
+    max-width: 450px;
+    margin-left: 13px;
+    margin-right: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2), 6px 6px 15px rgba(0, 0, 0, 0.5);
+  }
+  #instruction-text{
+    text-align: left;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
 
