@@ -212,6 +212,8 @@ input, select {
   margin-top: 20px;
   text-align: left;
   margin-left: 30px; /* Align to the left */
+  margin-bottom: 100px;
+
 }
 
 .error-message-container {
