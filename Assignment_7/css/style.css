@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+}
+/* HEADER STYLES */
+header {
+    background: linear-gradient(90deg, #8841a3, #c74da6, #8841a3);
+    color: white;
+    padding: 0.5rem 0;
+    text-align: center;
+    transition: background 0.3s ease;
+    border-bottom: 3px solid #725b7c;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+/* FOOTER STYLES */
+footer {
+    background: linear-gradient(90deg, #8841a3, #c74da6, #8841a3);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 7.3rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 6px rgba(46, 62, 58, 0.3);
+    transition: background 0.3s ease;
+}
+.thank-footer{
+    background: linear-gradient(90deg, #8841a3, #c74da6, #8841a3);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 36rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 6px rgba(46, 62, 58, 0.3);
+    transition: background 0.3s ease;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+p,h1 {
+    text-align: center;
+}
+#back{
+    text-align: center;
+    margin-left: 300px;
+}
+.product {
+    display: flex;
+    gap: 20px;
+}
+.image-gallery {
+    flex: 1;
+    text-align: center;
+    border: 2px solid rgb(136, 132, 132);
+    box-shadow: 2px 2px 5px gray;
+    padding: 4px;
+    border-radius: 3px;
+}
+#main-image {
+    width: 100%;
+    max-width: 300px;
+}
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.thumb {
+    width: 60px;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(217, 89, 89);
+    padding-bottom: 3px;
+}
+.thumb.active {
+    border-bottom: 2px solid rgb(25, 25, 132);
+}
+.details {
+    width: 300px;
+}
+.option-box {
+    width: 80%;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 9px;
+    margin-bottom: 10px;
+}
+.price-info{
+    width: 80%;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 9px;
+    margin-bottom: 10px;
+}
+.cart-button{
+    width: 80%;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 9px;
+}
+#add-to-cart{
+    border: 2px solid #dea8a8;
+    border-radius: 9px;
+    background-color: rgb(99, 90, 108);
+}
+.option-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.option-box label {
+    display: block;
+    margin: 3px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5a5a5a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+}
+
+
+
+/* 📌 RESPONSIVE DESIGN FOR TABLETS (768px) */
+@media (max-width: 768px) {
+    footer {
+        padding: 0.5rem 0;
+        font-size: 0.7rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin-top: 0;
+    }
+    #back{
+        margin-left: 300px;
+    }
+}
+
+/* 📌 RESPONSIVE DESIGN FOR MOBILE DEVICES (480px) */
+@media (max-width: 480px) {
+    /* Reduce header and footer padding */
+    footer {
+        padding: 0.5rem 0;
+        font-size: 0.7rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin-top: 0;
+    }
+    .image-gallery {
+        max-height: 400px;
+    }
+    #back{
+        margin-left: 150px;
+    }
+}
