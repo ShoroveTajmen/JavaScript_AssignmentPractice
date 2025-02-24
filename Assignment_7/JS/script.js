@@ -13,10 +13,12 @@ $(document).ready(function() {
     });
 
     // Update total price when quantity changes
-    $("#quantity").change(function() {
+    $("#quantity").on('input', function() {
         let quantity = $(this).val();
-        let total = unitPrice * quantity;
-        $("#total-price").text(total.toFixed(2));
+        if (quantity >= 1) { // Ensure quantity is at least 1
+            let total = unitPrice * quantity;
+            $("#total-price").text(total.toFixed(2));
+        }
     });
 
     // Change color and update images

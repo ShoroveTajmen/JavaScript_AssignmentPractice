@@ -31,12 +31,7 @@
                 <div class="price-info">
                     <p><strong>Price:</strong> $20.00</p>
                 <label for="quantity">Quantity:</label>
-                <select id="quantity">
-                    <option value="1" selected>1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
+                <input type="number" id="quantity" value="1" min="1">
                 <p><strong>Total:</strong> $<span id="total-price">20.00</span></p>
                 </div>
 
@@ -64,7 +59,7 @@
     </div>
     <!-- Footer -->
     <footer>
-        <p>© 2025 Your Company. All Rights Reserved by Annayesha Nargis.</p>
+        <p id="footer-para">© 2025 Your Company. All Rights Reserved by Annayesha Nargis.</p>
     </footer>    
     <script src="./JS/script.js"></script>
 </body>
