@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Carousel</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Part A: Product Carousel</h2>
+        <div class="image-container">
+            <img id="productImage" src="images/product/bike-1.jpg" alt="Bike Image">
+        </div>
+        <div class="buttons">
+            <button onclick="startSpin(1)">Spin</button>
+            <button onclick="startSpin(-1)">Reverse Spin</button>
+            <button onclick="stopSpin()">Stop</button>
+        </div>
+    </div>
+    <div class="game-container">
+        <h2>Part B: Pacman</h2>
+        <p>Control movement using the <strong>W A S D</strong> keys, use <strong>X</strong> to stop</p>
+        <div class="controls">
+            <button id="up">W</button>
+            <button id="left">A</button>
+            <button id="stop" class="active">X</button>
+            <button id="right">D</button>
+            <button id="down">S</button>
+        </div>
+        <div class="game-box">
+            <img id="pacman" src="images/pacman/pac-man-static.gif" alt="Pac-Man">
+        </div>
+    </div>
+    <script src="./JS/script.js"></script>
+</body>
+</html>
