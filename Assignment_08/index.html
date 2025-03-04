@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
+    <header>
+        <h1>Assignment 08</h1>
+    </header>
+
     <div class="container">
         <h2>Part A: Product Carousel</h2>
-    <div class="product-carousal">
-        <div class="image-container">
-            <img id="productImage" src="images/product/bike-1.jpg" alt="Bike Image">
-        </div>
-        <div class="buttons">
-            <button onclick="startSpin(1)">Spin</button>
-            <button onclick="startSpin(-1)">Reverse Spin</button>
-            <button onclick="stopSpin()">Stop</button>
+        <div class="product-carousal">
+            <div class="image-container">
+                <img id="productImage" src="images/product/bike-1.jpg" alt="Bike Image">
+            </div>
+            <div class="buttons">
+                <button onclick="startSpin(1)">Spin</button>
+                <button onclick="startSpin(-1)">Reverse Spin</button>
+                <button onclick="stopSpin()">Stop</button>
+            </div>
         </div>
     </div>
-    </div>
+
     <div class="game-container">
         <h2>Part B: Pacman</h2>
         <p>Control movement using the <strong>W A S D</strong> keys, use <strong>X</strong> to stop</p>
@@ -38,6 +44,11 @@
             <img id="pacman" src="images/pacman/pac-man-static.gif" alt="Pac-Man">
         </div>
     </div>
+
+    <footer>
+        <p id="footer-para">&copy; 2025 Interactive Showcase. All rights reserved.</p>
+    </footer>
+
     <script src="./JS/script.js"></script>
 </body>
 </html>

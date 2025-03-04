@@ -4,12 +4,39 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-.container {
+header {
+    background-color: rgb(91, 5, 5);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+    border-bottom: 3px solid yellow;
+    box-shadow: 0 4px 8px rgb(91, 5, 5);
+}
+
+footer {
+    background-color: rgb(91, 5, 5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+#footer-para{
+    text-align: center;
+}
+
+.container, .game-container {
     background: #fff;
-    width: 50%;
-    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -20,7 +47,8 @@ h2 {
     color: olive;
     text-align: left;
 }
-p{
+
+p {
     text-align: left;
 }
 
@@ -56,17 +84,18 @@ button {
 button:hover {
     opacity: 0.8;
 }
+
 .product-carousal {
     border: 2px solid rgb(91, 5, 5);
     padding: 5px;
     border-radius: 10px;
-    box-shadow: 0 0 10px black; /* Added black shadow */
+    box-shadow: 0 0 10px black;
 }
 
-/* pacman */
+/* Pacman */
 .game-container {
     width: 80%;
-    max-width: 90vw; /* Ensures it doesn’t exceed 90% of the viewport */
+    max-width: 90vw;
     margin: 20px auto;
     padding: 20px;
     background: #fff;
@@ -75,7 +104,6 @@ button:hover {
     border: 3px solid rgb(91, 5, 5);
 }
 
-
 .controls button {
     width: 40px;
     height: 40px;
@@ -83,19 +111,18 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    border: 2px solid #ab7010; /* Added border */
+    border: 2px solid #ab7010;
     background-color: rgb(91, 5, 5);
     color: white;
     padding: 4px;
     border-radius: 5px;
 }
 
-#x-button{
+#x-button {
     border: 2px solid white;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    /* padding: 2px; */
     color: white;
     padding-right: 4px;
     padding-left: 4px;
@@ -106,15 +133,14 @@ button:hover {
 .controls .active {
     background-color: rgb(245, 245, 239);
     color: #900;
-    border: 3px solid #eed40b; /* Added border */
+    border: 3px solid #eed40b;
 }
 
-.controls .active #x-button{
+.controls .active #x-button {
     border: 2px solid black;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    /* padding: 2px; */
     color: black;
     padding-right: 4px;
     padding-left: 4px;
@@ -126,11 +152,10 @@ button:hover {
     border: 4px solid rgb(91, 5, 5);
     width: 45%;
     background-color: black;
-    margin: 0 auto; /* Centers the element horizontally */
+    margin: 0 auto;
     margin-bottom: 8px;
-    border-radius: 10px; /* Added border radius */
+    border-radius: 10px;
 }
-
 
 .game-box {
     width: 100%;
@@ -139,7 +164,7 @@ button:hover {
     background-color: black;
     border: 4px solid rgb(91, 5, 5);
     overflow: hidden;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 #pacman {
@@ -149,4 +174,60 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .container, .game-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .keyboard {
+        width: 60%;
+    }
+
+    .game-box {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header, footer {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .keyboard {
+        width: 80%;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    .container{
+        width: 85%;
+    }
 }
