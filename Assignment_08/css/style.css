@@ -13,15 +13,18 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 3px solid maroon;
+    border: 3px solid rgb(91, 5, 5);
 }
 
 h2 {
     color: olive;
+    text-align: left;
+}
+p{
+    text-align: left;
 }
 
 .image-container {
-    border: 2px solid maroon;
     padding: 10px;
     border-radius: 10px;
     display: inline-block;
@@ -40,7 +43,7 @@ img {
 }
 
 button {
-    background-color: maroon;
+    background-color: rgb(91, 5, 5);
     color: white;
     border: none;
     padding: 10px 15px;
@@ -53,7 +56,12 @@ button {
 button:hover {
     opacity: 0.8;
 }
-
+.product-carousal {
+    border: 2px solid rgb(91, 5, 5);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black; /* Added black shadow */
+}
 
 /* pacman */
 .game-container {
@@ -64,7 +72,9 @@ button:hover {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgb(91, 5, 5);
 }
+
 
 .controls button {
     width: 40px;
@@ -73,24 +83,63 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    border: none;
-    background-color: #444;
+    border: 2px solid #ab7010; /* Added border */
+    background-color: rgb(91, 5, 5);
     color: white;
+    padding: 4px;
     border-radius: 5px;
 }
 
-.controls .active {
-    background-color: yellow;
-    color: black;
+#x-button{
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    /* padding: 2px; */
+    color: white;
+    padding-right: 4px;
+    padding-left: 4px;
+    font-size: small;
+    background-color: rgb(229, 43, 43);
 }
+
+.controls .active {
+    background-color: rgb(245, 245, 239);
+    color: #900;
+    border: 3px solid #eed40b; /* Added border */
+}
+
+.controls .active #x-button{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    /* padding: 2px; */
+    color: black;
+    padding-right: 4px;
+    padding-left: 4px;
+    font-size: small;
+    background-color: rgb(229, 43, 43);
+}
+
+.keyboard {
+    border: 4px solid rgb(91, 5, 5);
+    width: 45%;
+    background-color: black;
+    margin: 0 auto; /* Centers the element horizontally */
+    margin-bottom: 8px;
+    border-radius: 10px; /* Added border radius */
+}
+
 
 .game-box {
     width: 100%;
     height: 300px;
     position: relative;
     background-color: black;
-    border: 5px solid #900;
+    border: 4px solid rgb(91, 5, 5);
     overflow: hidden;
+    border-radius: 10px; 
 }
 
 #pacman {

@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h2>Part A: Product Carousel</h2>
+    <div class="product-carousal">
         <div class="image-container">
             <img id="productImage" src="images/product/bike-1.jpg" alt="Bike Image">
         </div>
@@ -18,15 +19,20 @@
             <button onclick="stopSpin()">Stop</button>
         </div>
     </div>
+    </div>
     <div class="game-container">
         <h2>Part B: Pacman</h2>
         <p>Control movement using the <strong>W A S D</strong> keys, use <strong>X</strong> to stop</p>
         <div class="controls">
-            <button id="up">W</button>
-            <button id="left">A</button>
-            <button id="stop" class="active">X</button>
-            <button id="right">D</button>
-            <button id="down">S</button>
+            <div class="keyboard">
+                <button id="up">W</button>
+                <div class="row">
+                    <button id="left">A</button>
+                    <button id="down">S</button>
+                    <button id="right">D</button>
+                </div>
+                <button id="stop" class="active"><span id="x-button">X</span></button>
+            </div>
         </div>
         <div class="game-box">
             <img id="pacman" src="images/pacman/pac-man-static.gif" alt="Pac-Man">
